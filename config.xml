@@ -47,4 +47,5 @@
 		<icon src="www\resources\android\icon\xxhdpi.png" qualifier="xxhdpi" />
 		<icon src="www\resources\android\icon\xxxhdpi.png" qualifier="xxxhdpi" />
 		</platform>
+	<icon src="icon.png" />
 </widget>
