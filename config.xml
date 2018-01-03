@@ -28,4 +28,23 @@
     <plugin name="cordova-plugin-whitelist" spec="~1.2.0" />
     <plugin name="cordova-plugin-console" spec="~1.0.1" />
     <plugin name="cordova-plugin-statusbar" spec="~1.0.1" />
+	
+	<platform name="ios">
+		<icon src="www\resources\ios\icon\Icon.png" width="57" height="57" />
+		<icon src="www\resources\ios\icon\Icon-72@2x.png" width="144" height="144" />
+		<icon src="www\resources\ios\icon\Icon-72.png" width="72" height="72" />
+		<icon src="www\resources\ios\icon\Icon@2x.png" width="114" height="114" />
+		<icon src="www\resources\ios\icon\Icon-60@2x.png" width="120" height="120" />
+		<icon src="www\resources\ios\icon\Icon-60@3x.png" width="180" height="180" />
+		<icon src="www\resources\ios\icon\Icon-76.png" width="76" height="76" />
+		<icon src="www\resources\ios\icon\Icon-76@2x.png" width="152" height="152" />
+		</platform>
+		<platform name="android">
+		<icon src="www\resources\android\icon\ldpi.png" qualifier="ldpi" />
+		<icon src="www\resources\android\icon\mdpi.png" qualifier="mdpi" />
+		<icon src="www\resources\android\icon\hdpi.png" qualifier="hdpi" />
+		<icon src="www\resources\android\icon\xhdpi.png" qualifier="xhdpi" />
+		<icon src="www\resources\android\icon\xxhdpi.png" qualifier="xxhdpi" />
+		<icon src="www\resources\android\icon\xxxhdpi.png" qualifier="xxxhdpi" />
+		</platform>
 </widget>
