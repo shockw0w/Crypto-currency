@@ -2,23 +2,12 @@
 	<widget xmlns = "http://www.w3.org/ns/widgets"
 		xmlns:gap = "http://phonegap.com/ns/1.0"
 		xmlns:android = "http://schemas.android.com/apk/res/android"
-		id        = "com.phonegap.helloworld"
+		id        = ""
 		versionCode=""
-		version   = "1.0.0">
-		<name>Crypto currency		</name>
-		<description>Справочник по крипто валютам		</description>
-		<author href="" email="bender3000@ya.ru">Apache Cordova Team		</author>
-		<feature name="http://api.phonegap.com/1.0/battery" />
-		<feature name="http://api.phonegap.com/1.0/camera" />
-		<feature name="http://api.phonegap.com/1.0/contacts" />
-		<feature name="http://api.phonegap.com/1.0/file" />
-		<feature name="http://api.phonegap.com/1.0/geolocation" />
-		<feature name="http://api.phonegap.com/1.0/media" />
-		<feature name="http://api.phonegap.com/1.0/network" />
-		<feature name="http://api.phonegap.com/1.0/notification" />
-		<plugin name="cordova-plugin-console"  />
-		<plugin name="cordova-plugin-statusbar"  spec="~1.0.1" />
-		<plugin name="undefined" version="~1.2.0" source="npm"  />
+		version   = "0.0.1">
+		<name>Справочник по криптовалютам		</name>
+		<description>		</description>
+		<author href="http://ya.ru" email="bender3000@ya.ru">Timur Zhantureyev		</author>
 		<preference name="phonegap-version" value="cli-6.3.0" />
 		<preference name="android-build-tool" value="gradle" />
 		<preference name="orientation" value="default" />
@@ -71,19 +60,4 @@
 		<platform name="winphone">
 		</platform>
 		 <icon src="icon.png" />
-		<allow-intent href="http://*/*" />
-		<allow-intent href="https://*/*" />
-		<allow-intent href="tel:*" />
-		<allow-intent href="sms:*" />
-		<allow-intent href="mailto:*" />
-		<allow-intent href="geo:*" />
-		<platform name="android" >
-		<allow-intent href="market:*" />
-		</platform>
-		<platform name="ios" >
-		<allow-intent href="itms:*" />
-		</platform>
-		<platform name="ios" >
-		<allow-intent href="itms-apps:*" />
-		</platform>
 		</widget>
