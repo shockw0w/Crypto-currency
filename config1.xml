@@ -1,0 +1,63 @@
+		<?xml version="1.0" encoding="UTF-8"?>
+	<widget xmlns = "http://www.w3.org/ns/widgets"
+		xmlns:gap = "http://phonegap.com/ns/1.0"
+		xmlns:android = "http://schemas.android.com/apk/res/android"
+		id        = ""
+		versionCode=""
+		version   = "0.0.1">
+		<name>Справочник по криптовалютам		</name>
+		<description>		</description>
+		<author href="http://ya.ru" email="bender3000@ya.ru">Timur Zhantureyev		</author>
+		<preference name="phonegap-version" value="cli-6.3.0" />
+		<preference name="android-build-tool" value="gradle" />
+		<preference name="orientation" value="default" />
+		<preference name="fullscreen" value="false" />
+		<preference name="target-device" value="universal" />
+		<preference name="webviewbounce" value="true" />
+		<preference name="prerendered-icon" value="false" />
+		<preference name="stay-in-webview" value="true" />
+		<preference name="ios-statusbarstyle" value="default" />
+		<preference name="detect-data-types" value="true" />
+		<preference name="exit-on-suspend" value="true" />
+		<preference name="show-splash-screen-spinner" value="true" />
+		<preference name="auto-hide-splash-screen" value="true" />
+		<preference name="FadeSplashScreen " value="true" />
+		<preference name="EnableViewportScale" value="false" />
+		<preference name="MediaPlaybackRequiresUserAction" value="false" />
+		<preference name="AllowInlineMediaPlayback" value="true" />
+		<preference name="BackupWebStorage" value="none" />
+		<preference name="TopActivityIndicator" value="white" />
+		<preference name="KeyboardDisplayRequiresUserAction" value="true" />
+		<preference name="KeyboardShrinksView " value="true" />
+		<preference name="HideKeyboardFormAccessoryBar" value="true" />
+		<preference name="SuppressesIncrementalRendering" value="false" />
+		<preference name="windows-identity-name" value="" />
+		<preference name="android-installLocation" value="auto" />
+		<preference name="SplashScreenDelay" value="2000" />
+		<preference name="ErrorUrl" value="null" />
+		<preference name="BackgroundColor" value="0x000000" />
+		<preference name="DisallowOverscroll" value="true" />
+		<preference name="LoadingDialog" value="," />
+		<preference name="LoadUrlTimeoutValue" value="null" />
+		<platform name="ios">
+		<icon src="file://C:\Users\timur\Dropbox\app idea\cryptocurrency\Crypto currency\www\resources\ios\icon\Icon.png" width="57" height="57" />
+		<icon src="file://C:\Users\timur\Dropbox\app idea\cryptocurrency\Crypto currency\www\resources\ios\icon\Icon-72@2x.png" width="144" height="144" />
+		<icon src="file://C:\Users\timur\Dropbox\app idea\cryptocurrency\Crypto currency\www\resources\ios\icon\Icon-72.png" width="72" height="72" />
+		<icon src="file://C:\Users\timur\Dropbox\app idea\cryptocurrency\Crypto currency\www\resources\ios\icon\Icon@2x.png" width="114" height="114" />
+		<icon src="file://C:\Users\timur\Dropbox\app idea\cryptocurrency\Crypto currency\www\resources\ios\icon\Icon-60@2x.png" width="120" height="120" />
+		<icon src="file://C:\Users\timur\Dropbox\app idea\cryptocurrency\Crypto currency\www\resources\ios\icon\Icon-60@3x.png" width="180" height="180" />
+		<icon src="file://C:\Users\timur\Dropbox\app idea\cryptocurrency\Crypto currency\www\resources\ios\icon\Icon-76.png" width="76" height="76" />
+		<icon src="file://C:\Users\timur\Dropbox\app idea\cryptocurrency\Crypto currency\www\resources\ios\icon\Icon-76@2x.png" width="152" height="152" />
+		</platform>
+		<platform name="android">
+		<icon src="file://C:\Users\timur\Dropbox\app idea\cryptocurrency\Crypto currency\www\resources\android\icon\ldpi.png" qualifier="ldpi" />
+		<icon src="file://C:\Users\timur\Dropbox\app idea\cryptocurrency\Crypto currency\www\resources\android\icon\mdpi.png" qualifier="mdpi" />
+		<icon src="file://C:\Users\timur\Dropbox\app idea\cryptocurrency\Crypto currency\www\resources\android\icon\hdpi.png" qualifier="hdpi" />
+		<icon src="file://C:\Users\timur\Dropbox\app idea\cryptocurrency\Crypto currency\www\resources\android\icon\xhdpi.png" qualifier="xhdpi" />
+		<icon src="file://C:\Users\timur\Dropbox\app idea\cryptocurrency\Crypto currency\www\resources\android\icon\xxhdpi.png" qualifier="xxhdpi" />
+		<icon src="file://C:\Users\timur\Dropbox\app idea\cryptocurrency\Crypto currency\www\resources\android\icon\xxxhdpi.png" qualifier="xxxhdpi" />
+		</platform>
+		<platform name="winphone">
+		</platform>
+		 <icon src="icon.png" />
+		</widget>
