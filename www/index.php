@@ -1,3 +1,16 @@
+<?php
+include 'inc/db.php';
+
+// Получаем первые 10 статей, которые будут видны изначально
+$res = mysqli_query($db, "SELECT * FROM `articles` ORDER BY `article_id` DESC LIMIT 10");
+
+// Формируем массив из 10 статей
+$articles = array();
+while($row = mysqli_fetch_assoc($res))
+{
+    $articles[] = $row;
+}
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -18,8 +31,11 @@
   <meta name="theme-color" content="#2196f3">
   <meta name="format-detection" content="telephone=no">
   <meta name="msapplication-tap-highlight" content="no">
+  <meta charset = "utf-8" />
   <title>Крипто валюта</title>
-
+  
+  <script type="text/javascript" src="js/scripts.js"></script>
+  <script type="text/javascript" src="js/jquery.js"></script>
   <link rel="stylesheet" href="css/framework7.min.css">
   <link rel="stylesheet" href="css/icons.css">
   <link rel="stylesheet" href="css/app.css">
@@ -34,36 +50,39 @@
         <div class="page">
           <div class="navbar">
             <div class="navbar-inner sliding">
-              <div class="title">Left Panel</div>
+              <div class="title">Навигация</div>
             </div>
           </div>
           <div class="page-content">
-            <div class="block-title">Left View Navigation</div>
+            <div class="block-title">Основное</div>
+            <div class="list links-list">
+              <ul>
+                <li>
+                  <a href="/about/" data-view=".view-main" class="panel-close">Новости</a>
+                </li>
+								<li>
+                  <a href="/form/" data-view=".view-main" class="panel-close">Информация для новичков</a>
+                </li>
+                <li>
+                  <a href="/form/" data-view=".view-main" class="panel-close">Беплатная криптовалюта</a>
+                </li>
+                <li>
+                  <a href="#" data-view=".view-main" class="back">Прогнозы цен</a>
+                </li>
+              </ul>
+            </div>
+			            <div class="block-title">Left View Navigation</div>
             <div class="list links-list">
               <ul>
                 <li><a href="/left-page-1/">Left Page 1</a></li>
                 <li><a href="/left-page-2/">Left Page 2</a></li>
               </ul>
             </div>
-            <div class="block-title">Control Main View</div>
-            <div class="list links-list">
-              <ul>
-                <li>
-                  <a href="/about/" data-view=".view-main" class="panel-close">About</a>
-                </li>
-                <li>
-                  <a href="/form/" data-view=".view-main" class="panel-close">Form</a>
-                </li>
-                <li>
-                  <a href="#" data-view=".view-main" class="back">Back in history</a>
-                </li>
-              </ul>
-            </div>
           </div>
         </div>
       </div>
     </div>
-    <!-- Right panel with cover effect -->
+    <!-- Right panel with cover effect 
     <div class="panel panel-right panel-cover theme-dark">
       <div class="view">
         <div class="page">
@@ -77,7 +96,7 @@
           </div>
         </div>
       </div>
-    </div>
+    </div>-->
 
     <!-- Your main view, should have "view-main" class -->
     <div class="view view-main ios-edges">
@@ -92,33 +111,35 @@
                 <i class="icon material-icons md-only">menu</i>
               </a>
             </div>
-            <div class="title sliding">My App</div>
-            <div class="right">
+            <div class="title sliding">Криптовалюта</div>
+           <!-- <div class="right">
               <a href="#" class="link icon-only panel-open" data-panel="right">
                 <i class="icon f7-icons ios-only">menu</i>
                 <i class="icon material-icons md-only">menu</i>
               </a>
-            </div>
+            </div>-->
           </div>
         </div>
-        <!-- Toolbar-->
+        <!-- Toolbar
         <div class="toolbar">
           <div class="toolbar-inner">
             <a href="#" class="link">Left Link</a>
             <a href="#" class="link">Right Link</a>
           </div>
-        </div>
+        </div>-->
         <!-- Scrollable page content-->
         <div class="page-content">
-          <div class="block block-strong">
-            <p>This is an example of split view application layout, commonly used on tablets. The main approach of such kind of layout is that you can see different views at the same time.</p>
+          <div class="block block-strong" id="articles">      
+    <?php foreach ($articles as $article): ?>
+        <p><b><?php echo $article['title']; ?></b><br />
+        <?php echo $article['text']; ?></p>
+    <?php endforeach; ?>
+	<button id="more">Дальше</button>
+</div>
+		  </div>
 
-            <p>Each view may have different layout, different navbar type (dynamic, fixed or static) or without navbar.</p>
 
-            <p>The fun thing is that you can easily control one view from another without any line of JavaScript just using "data-view" attribute on links.</p>
-          </div>
-
-          <div class="block-title">Navigation</div>
+         <!--<div class="block-title">Navigation</div>
           <div class="list">
             <ul>
               <li>
@@ -181,7 +202,7 @@
           </div>
         </div>
       </div>
-    </div>
+    </div>-->
 
     <!-- Popup -->
     <div class="popup" id="my-popup">
