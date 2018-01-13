@@ -1,16 +1,3 @@
-<?php
-include 'inc/db.php';
-
-// Получаем первые 10 статей, которые будут видны изначально
-$res = mysqli_query($db, "SELECT * FROM `articles` ORDER BY `article_id` DESC LIMIT 10");
-
-// Формируем массив из 10 статей
-$articles = array();
-while($row = mysqli_fetch_assoc($res))
-{
-    $articles[] = $row;
-}
-?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -33,9 +20,8 @@ while($row = mysqli_fetch_assoc($res))
   <meta name="msapplication-tap-highlight" content="no">
   <meta charset = "utf-8" />
   <title>Крипто валюта</title>
-  
-  <script type="text/javascript" src="js/scripts.js"></script>
-  <script type="text/javascript" src="js/jquery.js"></script>
+     <link rel="stylesheet" href="css/framework7.ios.min.css">
+   <link rel="stylesheet" href="css/framework7.ios.colors.min.css">
   <link rel="stylesheet" href="css/framework7.min.css">
   <link rel="stylesheet" href="css/icons.css">
   <link rel="stylesheet" href="css/app.css">
@@ -128,13 +114,71 @@ while($row = mysqli_fetch_assoc($res))
           </div>
         </div>-->
         <!-- Scrollable page content-->
-        <div class="page-content">
-          <div class="block block-strong" id="articles">      
-    <?php foreach ($articles as $article): ?>
-        <p><b><?php echo $article['title']; ?></b><br />
-        <?php echo $article['text']; ?></p>
-    <?php endforeach; ?>
-	<button id="more">Дальше</button>
+		 <div class="page-content">	
+		<div class="block block-strong">
+
+<iframe width="100%" src="https://xchange.cash" scrolling="yes" frameborder="0" allowfullscreen></iframe> 
+  </div>
+
+         </div>
+       </div>
+      </div>
+    </div>
+  <!-- </div>-->
+ </div>
+ <script>
+   var myApp = new Framework7();
+
+   var $$ = Dom7;
+
+   // Loading flag
+   var loading = false;
+
+   // Last loaded index
+   var lastIndex = $$('.list-block li').length;
+
+   // Max items to load
+   var maxItems = 60;
+
+   // Append items per load
+   var itemsPerLoad = 20;
+
+   // Attach 'infinite' event handler
+   $$('.infinite-scroll').on('infinite', function () {
+
+    // Exit, if loading in progress
+    if (loading) return;
+
+    // Set loading flag
+    loading = true;
+
+    // Emulate 1s loading
+    setTimeout(function () {
+     // Reset loading flag
+     loading = false;
+
+     if (lastIndex >= maxItems) {
+      // Nothing more to load, detach infinite scroll events to prevent unnecessary loadings
+      myApp.detachInfiniteScroll($$('.infinite-scroll'));
+      // Remove preloader
+      $$('.infinite-scroll-preloader').remove();
+      return;
+     }
+
+     // Generate new items HTML
+     var html = '';
+     for (var i = lastIndex + 1; i <= lastIndex + itemsPerLoad; i++) {
+      html += '<li class="item-content"><div class="item-inner"><div class="item-title">Item ' + i + '</div></div></li>';
+     }
+
+     // Append new items
+     $$('.list-block ul').append(html);
+
+     // Update last loaded index
+     lastIndex = $$('.list-block li').length;
+    }, 1000);
+   });
+ </script>	
 </div>
 		  </div>
 
